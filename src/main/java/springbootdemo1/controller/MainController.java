@@ -30,7 +30,7 @@ public class MainController {
 	
 	@GetMapping("/alltaskslist")
 	public String allTestDatas(HttpServletRequest request) {
-		request.setAttribute("testTasks", testTaskService.findAll());
+		request.setAttribute("customer", testTaskService.findAll());
 		request.setAttribute("mode", "MODE_TASKS");
 		return "listTasks";
 	}
@@ -41,14 +41,14 @@ public class MainController {
 		return "listTasks";
 	}
 	
-	@PostMapping("/savetask")
-	public String saveTestTask(@ModelAttribute TestTask testTask, BindingResult result, HttpServletRequest request) {
-		testTask.setDateCreated(new Date());
-		testTaskService.save(testTask);
-		request.setAttribute("testTasks", testTaskService.findAll());
-		request.setAttribute("mode", "MODE_TASKS");
-		return "listTasks";
-	}
+//	@PostMapping("/savetask")
+//	public String saveTestTask(@ModelAttribute TestTask testTask, BindingResult result, HttpServletRequest request) {
+//		testTask.setDateCreated(new Date());
+//		testTaskService.save(testTask);
+//		request.setAttribute("testTasks", testTaskService.findAll());
+//		request.setAttribute("mode", "MODE_TASKS");
+//		return "listTasks";
+//	}
 	
 	@GetMapping("/updatetask")
 	public String updateTestTask(@RequestParam int id, HttpServletRequest request) {

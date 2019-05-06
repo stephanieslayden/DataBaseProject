@@ -17,55 +17,39 @@ public class TestTask implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	public TestTask(String name, String description, Date dateCreated, boolean finished) {
+	public TestTask(String firstName, String lastName, String phoneNumber) {
 		super();
-		this.name = name;
-		this.description = description;
-		this.dateCreated = dateCreated;
-		this.finished = finished;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.phoneNumber = phoneNumber;
 	}
-	private String name;
-	private String description;
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date dateCreated;
-	private boolean finished;
+	private String firstName;
+	private String lastName;
+	private String phoneNumber;
 	
 	public TestTask(){}
 	
-	public int getId() {
-		return id;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getName() {
-		return name;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public String getDescription() {
-		return description;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public Date getDateCreated() {
-		return dateCreated;
-	}
-	public void setDateCreated(Date dateCreated) {
-		this.dateCreated = dateCreated;
-	}
-	public boolean isFinished() {
-		return finished;
-	}
-	public void setFinished(boolean finished) {
-		this.finished = finished;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 	@Override
 	public String toString() {
-		return "TestTask [id=" + id + ", name=" + name + ", description=" + description + ", dateCreated=" + dateCreated
-				+ ", finished=" + finished + "]";
+		return "TestTask [firstName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + "]";
 	}
 	
 	

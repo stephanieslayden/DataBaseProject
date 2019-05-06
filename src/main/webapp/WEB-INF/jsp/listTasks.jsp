@@ -32,25 +32,21 @@
 				<table class="table table-hover table-striped table-bordered">
 					<thead>
 						<tr>
-							<th>ID</th>
-							<th>Name</th>
-							<th>Description</th>
-							<th>Date Created</th>
-							<th>Finished</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Phone Number</th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${testTasks}" var="testTask">
+						<c:forEach items="${customer}" var="customer">
 							<tr>
-								<td>${testTask.id }</td>
-								<td>${testTask.name }</td>
-								<td>${testTask.description }</td>
-								<td><fmt:formatDate pattern="dd-MM-yyyy HH:mm:ss" value="${testTask.dateCreated }"/></td>
-								<td>${testTask.finished }</td>
+								<td>${customer.firstName}</td>
+								<td>${customer.lastName}</td>
+								<td>${customer.phoneNumber}</td>
 								<td class="text-center">
-									<a href="updatetask?id=${testTask.id}"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
-									<a href="deletetask?id=${testTask.id}"><span class="glyphicon glyphicon-trash"></span></a>
+									<a href="updatetask?id=${movie.movie_id}"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+									<a href="deletetask?id=${movie.movie_id}"><span class="glyphicon glyphicon-trash"></span></a>
 								</td>
 							</tr>
 						</c:forEach>
