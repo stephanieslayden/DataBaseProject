@@ -40,8 +40,4 @@ public class TestTaskService {
 		testTaskRepository.delete(id);
 	}
 	
-	
-	
-	
-	
 }

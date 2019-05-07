@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import springbootdemo1.model.TestTask;
+import springbootdemo1.service.MovieService;
 import springbootdemo1.service.TestTaskService;
 
 @RestController
@@ -16,10 +17,19 @@ public class SampleRestController {
 	@Autowired
 	private TestTaskService testTaskService;
 	
-	@GetMapping("/test")
-	public String hello() {
-		return "Hello from controller...";
+	@Autowired
+	private MovieService movieService;
+	
+//	@GetMapping("/test")
+//	public String hello() {
+//		return "Hello from controller...";
+//	}
+	
+	@GetMapping("/all-movies")
+	public String allMovies() {
+		return movieService.findAll().toString();
 	}
+	
 	/*
 	@GetMapping("/all-testtasks")
 	public String allTestTasks() {

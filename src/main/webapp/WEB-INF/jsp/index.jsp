@@ -2,10 +2,32 @@
 
 <!-- Jumbotron -->
 <div class="jumbotron">
-  <h1>Test Task Management!!!!!</h1>
-  <h2>By using spring boot with bootstrap and MySQL DB!</h2>
-  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-  <p><a class="btn btn-lg btn-success" href="alltaskslist" role="button">View all datas</a></p>
+<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<table class="table table-hover table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Producer</th>
+							<th>Year</th>
+							<th>Rating</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${Movie}" var="Movie">
+							<tr>
+								<td>${Movie.title}</td>
+								<td>${Movie.producer}</td>
+								<td>${Movie.year}</td>
+								<td>${Movie.rating}</td>
+								<td>${Movie.price}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
 </div>
 
 <!-- Example row of columns -->

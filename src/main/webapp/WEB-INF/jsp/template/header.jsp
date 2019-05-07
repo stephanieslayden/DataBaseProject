@@ -10,7 +10,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <title>Movie Rentals</title>
 
@@ -44,7 +44,7 @@
         <h3 class="text-muted">Movie Rentals</h3>
         <nav>
           <ul class="nav nav-justified">
-            <li class="active"><a href="/">Browse</a></li>
+            <li class="active"><a href="/browse">Browse</a></li>
             <li><a href="alltaskslist">My Rentals</a></li>
             <li><a href="newtask">Search</a></li>
             <li><a href="#">Profile</a></li>
